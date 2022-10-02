@@ -12,5 +12,9 @@ img {
   width:100%;
   height:auto;
   text-align: center;
-  float: center;
+ 
+}
+
+.text {
+  color: white;
 }

@@ -77,6 +77,7 @@ const clickHndler = (e) => {
         window.alert('せいかい');
         if(score === 5) {
             audio_bgm();
+            document.getElementById("picture_1").src="./assets/image/gogo-hirokun.png";
         } else {  
         };
         score++;
