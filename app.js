@@ -8,6 +8,12 @@ function audio_huseikai() {
     document.getElementById('btn_audio_huseikai').play(); //クリックしたら音を再生
 }
 
+function audio_bgm() {
+    document.getElementById('btn_audio_bgm').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio_bgm').play(); //クリックしたら音を再生
+}
+
+
 
 const quiz = [
     {
@@ -23,9 +29,9 @@ const quiz = [
       answers: [ 'すべりだい', 'しんごうき', 'やま', 'しんかんせん'],
       correct: 'しんごうき'
     }, {
-        question: 'ゆりちゃんの好きな食べ物は？',
-        answers: [ 'スイカ', 'なっとう', 'バナナ', 'とうふ'],
-        correct: 'スイカ'
+        question: 'ゆりちゃんの好きな教科は？',
+        answers: [ 'さんすう', 'こくご', 'せいかつ', 'ずこう'],
+        correct: 'こくご'
     }, {
         question: 'ひろくんのすきな食べ物は？',
         answers: [ 'なっとう', 'りんご', 'みかん', 'あーぼ'],
@@ -69,6 +75,11 @@ const clickHndler = (e) => {
     if(quiz[quizIndex].correct === e.target.textContent){
         audio_seikai();
         window.alert('せいかい');
+        // if(score === 5) {
+        //     audio_bgm();
+        // } else {
+            
+        // };
         score++;
     } else {
         audio_huseikai();
